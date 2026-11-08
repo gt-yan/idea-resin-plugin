@@ -1,0 +1,25 @@
+idea-resin-plugin
+Copyright 2026 The idea-resin-plugin contributors
+
+This product is a community port of the "Resin" integration plugin that was
+originally published by JetBrains s.r.o. on the JetBrains Marketplace
+(Marketplace plugin ID 14598, plugin ID com.intellij.resin), distributed under
+the Apache License, Version 2.0.
+
+The source code in this repository was reconstructed from the last publicly
+available build of that plugin (version 232.6734.9) and subsequently ported to
+newer IntelliJ Platform APIs. Modifications include, but are not limited to:
+
+  - rebuilding the project with the IntelliJ Platform Gradle Plugin 2.x;
+  - extracting nested model-data classes into top-level classes;
+  - removing decompiler-generated synthetic members;
+  - hardening version parsing for newer Resin releases;
+  - extending the supported IDE build range up to 2026.x.
+
+"IntelliJ IDEA" and "JetBrains" are trademarks of JetBrains s.r.o. This project
+is not affiliated with, endorsed by, or sponsored by JetBrains s.r.o.
+
+"Resin" is a product of Caucho Technology, Inc. This project only integrates
+with it and does not redistribute any Resin binaries.
+
+Licensed under the Apache License, Version 2.0. See the LICENSE file for details.

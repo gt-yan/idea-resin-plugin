@@ -1,0 +1,51 @@
+<idea-plugin>
+  <id>io.github.resin-plugin.resin</id>
+  <name>Resin (Community)</name>
+
+  <depends>com.intellij.modules.java</depends>
+  <depends>com.intellij.modules.ultimate</depends>
+  <depends>com.intellij.javaee</depends>
+  <depends>com.intellij.javaee.app.servers.integration</depends>
+
+  <description><![CDATA[
+    <p>Integrates the <b>Resin</b> application server into IntelliJ IDEA so you can
+    configure, deploy, run and debug Java web applications without leaving the IDE.</p>
+
+    <p><b>Features</b></p>
+    <ul>
+      <li>Add a Resin installation under <i>Settings | Application Servers</i></li>
+      <li>Create local or remote Resin run configurations</li>
+      <li>Deploy and undeploy web application artifacts</li>
+      <li>Start, stop and monitor the Resin server from the IDE</li>
+      <li>Debug Java and JSP code (including remote debugging over JMX)</li>
+      <li>Automatic detection of Resin 2.x / 3.x / 4.x / 5.x installations</li>
+    </ul>
+
+    <p><b>Compatibility</b><br/>
+    IntelliJ IDEA Ultimate 2023.1 (build 232) through 2026.x (build 263).
+    The plugin relies on the bundled Jakarta EE / Application Servers modules,
+    so IntelliJ IDEA Ultimate is required.</p>
+
+    <p>This is a community port. The original JetBrains plugin stopped at IDEA 2023.1;
+    this project keeps it working on current releases. Licensed under Apache-2.0.</p>
+  ]]></description>
+
+  <change-notes><![CDATA[
+    <h3>1.0.0</h3>
+    <ul>
+      <li>Community port of the original Resin plugin, now supporting IntelliJ IDEA 2023.1 - 2026.3.</li>
+      <li>Recompiled with JDK 17 and the IntelliJ Platform Gradle Plugin 2.x.</li>
+      <li>Fixes version detection and configuration generation for newer Resin releases.</li>
+    </ul>
+  ]]></change-notes>
+
+  <vendor email="2412903178@qq.com" url="https://github.com/gt-yan/idea-resin-plugin">Resin Plugin Community</vendor>
+
+  <category>Deployment</category>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <configurationType implementation="org.intellij.j2ee.web.resin.ResinConfigurationType"/>
+    <configurationProducer implementation="org.intellij.j2ee.web.resin.ResinConfigurationProducer"/>
+    <javaee.app.servers.integration.appServerIntegration implementation="org.intellij.j2ee.web.resin.ResinManager"/>
+  </extensions>
+</idea-plugin>

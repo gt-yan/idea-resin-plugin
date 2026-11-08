@@ -1,0 +1,50 @@
+# ---- Gradle ----
+.gradle/
+build/
+
+# ---- IntelliJ Platform Gradle Plugin ----
+# Local IDE resolution cache and sandbox, regenerated on every build
+.intellijPlatform/
+
+# Local SDK / environment specific configuration
+local.properties
+
+# ---- IntelliJ IDEA / JetBrains ----
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# ---- Eclipse ----
+.classpath
+.project
+.settings/
+bin/
+
+# ---- VS Code ----
+.vscode/
+
+# ---- Operating System ----
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BL/
+# macOS
+.DS_Store
+# Linux
+*~
+
+# ---- Logs & temp files ----
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ---- Keystores / secrets (never commit) ----
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
