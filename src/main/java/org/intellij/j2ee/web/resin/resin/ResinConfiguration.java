@@ -41,7 +41,10 @@ public class ResinConfiguration {
       try {
          this.mySourceConfig = serverModel.findConfFile();
       } catch (RuntimeConfigurationException var7) {
-         throw new ExecutionException(var7.getMessageHtml().toString());
+         // Reference Throwable.getMessage() explicitly: ConfigurationException.getMessage()
+         // is deprecated, and its replacement getMessageHtml() only exists in 2023.3+,
+         // while this plugin supports IDEA 2023.2 (build 232) and later.
+         throw new ExecutionException(((Throwable)var7).getMessage());
       }
 
       this.myStrategy = helper.getStrategy();
