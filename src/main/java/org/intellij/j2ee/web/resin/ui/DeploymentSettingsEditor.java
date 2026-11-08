@@ -84,7 +84,7 @@ public class DeploymentSettingsEditor extends SettingsEditor<DeploymentModel> {
       this.myMainPanel = var1;
       var1.setLayout(new GridLayoutManager(4, 2, new Insets(0, 0, 0, 0), -1, -1, false, false));
       JLabel var2 = new JLabel();
-      this.$$$loadLabelText$$$(var2, DynamicBundle.getBundle("messages/ResinBundle", DeploymentSettingsEditor.class).getString("deployment.dlg.app.context"));
+      this.$$$loadLabelText$$$(var2, DynamicBundle.getResourceBundle(DeploymentSettingsEditor.class.getClassLoader(), "messages/ResinBundle").getString("deployment.dlg.app.context"));
       var1.add(var2, new GridConstraints(2, 0, 1, 1, 8, 0, 0, 0, (Dimension)null, (Dimension)null, (Dimension)null));
       Spacer var3 = new Spacer();
       var1.add(var3, new GridConstraints(3, 1, 1, 1, 0, 2, 1, 6, (Dimension)null, (Dimension)null, (Dimension)null));
@@ -92,14 +92,14 @@ public class DeploymentSettingsEditor extends SettingsEditor<DeploymentModel> {
       this.myApplicationContextField = var4;
       var1.add(var4, new GridConstraints(2, 1, 1, 1, 8, 1, 6, 0, (Dimension)null, new Dimension(150, -1), (Dimension)null));
       JLabel var5 = new JLabel();
-      this.$$$loadLabelText$$$(var5, DynamicBundle.getBundle("messages/ResinBundle", DeploymentSettingsEditor.class).getString("deployment.dlg.host.name.text"));
+      this.$$$loadLabelText$$$(var5, DynamicBundle.getResourceBundle(DeploymentSettingsEditor.class.getClassLoader(), "messages/ResinBundle").getString("deployment.dlg.host.name.text"));
       var1.add(var5, new GridConstraints(0, 0, 1, 1, 8, 0, 0, 0, (Dimension)null, (Dimension)null, (Dimension)null));
       JTextField var6 = new JTextField();
       this.myHostField = var6;
       var1.add(var6, new GridConstraints(0, 1, 1, 1, 8, 1, 6, 0, (Dimension)null, new Dimension(150, -1), (Dimension)null));
       JCheckBox var7 = new JCheckBox();
       this.myDefaultContextCheckBox = var7;
-      this.$$$loadButtonText$$$(var7, DynamicBundle.getBundle("messages/ResinBundle", DeploymentSettingsEditor.class).getString("deployment.dlg.default.context.checkbox"));
+      this.$$$loadButtonText$$$(var7, DynamicBundle.getResourceBundle(DeploymentSettingsEditor.class.getClassLoader(), "messages/ResinBundle").getString("deployment.dlg.default.context.checkbox"));
       var1.add(var7, new GridConstraints(1, 0, 1, 2, 8, 0, 3, 0, (Dimension)null, (Dimension)null, (Dimension)null));
    }
 

@@ -31,6 +31,12 @@
   ]]></description>
 
   <change-notes><![CDATA[
+    <h3>1.0.2</h3>
+    <ul>
+      <li>Replaced deprecated and scheduled-for-removal API usages with their current public equivalents
+          (file-chooser listeners, resource-bundle loading, XML serialization filter, JDOM XPath, exception message access).</li>
+    </ul>
+
     <h3>1.0.1</h3>
     <ul>
       <li>Removed usage of the private IntelliJ Platform internal API (<code>IconManager.loadRasterizedIcon</code>);

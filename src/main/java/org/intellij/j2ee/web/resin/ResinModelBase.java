@@ -16,7 +16,7 @@ import com.intellij.openapi.options.SettingsEditor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.InvalidDataException;
 import com.intellij.openapi.util.WriteExternalException;
-import com.intellij.util.xmlb.SkipDefaultValuesSerializationFilters;
+import com.intellij.util.xmlb.SkipDefaultsSerializationFilter;
 import com.intellij.util.xmlb.XmlSerializer;
 import java.io.File;
 import java.util.HashSet;
@@ -134,7 +134,7 @@ public abstract class ResinModelBase<D extends ResinModelDataBase> implements Se
    }
 
    public final void writeExternal(Element element) throws WriteExternalException {
-      XmlSerializer.serializeInto(this.myData, element, new SkipDefaultValuesSerializationFilters());
+      XmlSerializer.serializeInto(this.myData, element, new SkipDefaultsSerializationFilter());
    }
 
    public ResinPersistentDataHelper getHelper() {

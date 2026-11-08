@@ -41,7 +41,7 @@ public class ResinConfiguration {
       try {
          this.mySourceConfig = serverModel.findConfFile();
       } catch (RuntimeConfigurationException var7) {
-         throw new ExecutionException(var7.getMessage());
+         throw new ExecutionException(var7.getMessageHtml().toString());
       }
 
       this.myStrategy = helper.getStrategy();

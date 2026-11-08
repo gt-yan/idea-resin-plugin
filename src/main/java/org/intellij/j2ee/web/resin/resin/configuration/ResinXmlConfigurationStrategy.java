@@ -12,8 +12,9 @@ import java.util.List;
 import org.intellij.j2ee.web.resin.ResinModel;
 import org.intellij.j2ee.web.resin.resin.ResinInstallation;
 import org.jdom.Element;
-import org.jdom.JDOMException;
-import org.jdom.xpath.XPath;
+import org.jdom.filter2.Filters;
+import org.jdom.xpath.XPathExpression;
+import org.jdom.xpath.XPathFactory;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.Nullable;
 
@@ -48,8 +49,8 @@ class ResinXmlConfigurationStrategy extends Resin31ConfigurationStrategy {
 
          for(int var7 = 0; var7 < var6; ++var7) {
             String importAttrName = var5[var7];
-            XPath xpath = XPath.newInstance(".//*[name()='resin:import' or name()='resin:properties'][@" + importAttrName + "]");
-            List<Element> elements = xpath.selectNodes(rootElement);
+            XPathExpression<Element> xpath = XPathFactory.instance().compile(".//*[name()='resin:import' or name()='resin:properties'][@" + importAttrName + "]", Filters.element());
+            List<Element> elements = xpath.evaluate(rootElement);
             Iterator var11 = elements.iterator();
 
             while(var11.hasNext()) {
@@ -61,7 +62,7 @@ class ResinXmlConfigurationStrategy extends Resin31ConfigurationStrategy {
                }
             }
          }
-      } catch (JDOMException var14) {
+      } catch (RuntimeException var14) {
          LOG.info(var14);
       }
 

@@ -6,7 +6,7 @@ import com.intellij.javaee.appServers.deployment.DeploymentSource;
 import com.intellij.javaee.appServers.run.configuration.CommonModel;
 import com.intellij.openapi.util.InvalidDataException;
 import com.intellij.openapi.util.WriteExternalException;
-import com.intellij.util.xmlb.SkipDefaultValuesSerializationFilters;
+import com.intellij.util.xmlb.SkipDefaultsSerializationFilter;
 import com.intellij.util.xmlb.XmlSerializer;
 import org.jdom.Element;
 
@@ -51,7 +51,7 @@ public class ResinModuleDeploymentModel extends DeploymentModel implements Deplo
 
    public void writeExternal(Element element) throws WriteExternalException {
       super.writeExternal(element);
-      XmlSerializer.serializeInto(this.myData, element, new SkipDefaultValuesSerializationFilters());
+      XmlSerializer.serializeInto(this.myData, element, new SkipDefaultsSerializationFilter());
    }
 
    public void readExternal(Element element) throws InvalidDataException {

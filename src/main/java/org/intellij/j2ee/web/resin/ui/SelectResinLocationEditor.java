@@ -6,6 +6,7 @@ import com.intellij.icons.AllIcons.General;
 import com.intellij.javaee.appServers.appServerIntegrations.ApplicationServerPersistentDataEditor;
 import com.intellij.openapi.fileChooser.FileChooserDescriptor;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.TextBrowseFolderListener;
 import com.intellij.openapi.ui.TextFieldWithBrowseButton;
 import com.intellij.openapi.util.io.FileUtil;
 import com.intellij.openapi.util.text.StringUtil;
@@ -179,7 +180,7 @@ public class SelectResinLocationEditor extends ApplicationServerPersistentDataEd
    private static void initChooser(TextFieldWithBrowseButton field, String title, String description, boolean chooseFiles, boolean chooseDirs) {
       field.setText("");
       field.getTextField().setEditable(true);
-      field.addBrowseFolderListener(title, description, (Project)null, new FileChooserDescriptor(chooseFiles, chooseDirs, false, false, false, false));
+      field.addBrowseFolderListener(new TextBrowseFolderListener(new FileChooserDescriptor(chooseFiles, chooseDirs, false, false, false, false).withTitle(title).withDescription(description), (Project)null));
    }
 
    // $FF: synthetic method
@@ -190,27 +191,27 @@ public class SelectResinLocationEditor extends ApplicationServerPersistentDataEd
       Spacer var2 = new Spacer();
       var1.add(var2, new GridConstraints(5, 1, 1, 1, 0, 2, 1, 6, (Dimension)null, (Dimension)null, (Dimension)null));
       JLabel var3 = new JLabel();
-      this.$$$loadLabelText$$$(var3, DynamicBundle.getBundle("messages/ResinBundle", SelectResinLocationEditor.class).getString("location.dlg.resin.home.text"));
+      this.$$$loadLabelText$$$(var3, DynamicBundle.getResourceBundle(SelectResinLocationEditor.class.getClassLoader(), "messages/ResinBundle").getString("location.dlg.resin.home.text"));
       var1.add(var3, new GridConstraints(0, 0, 1, 1, 8, 0, 0, 0, (Dimension)null, (Dimension)null, (Dimension)null));
       TextFieldWithBrowseButton var4 = new TextFieldWithBrowseButton();
       this.resinHomeSelector = var4;
       var1.add(var4, new GridConstraints(0, 1, 1, 1, 1, 1, 3, 0, (Dimension)null, new Dimension(200, -1), (Dimension)null));
       JLabel var5 = new JLabel();
-      this.$$$loadLabelText$$$(var5, DynamicBundle.getBundle("messages/ResinBundle", SelectResinLocationEditor.class).getString("location.dlg.detected.version"));
+      this.$$$loadLabelText$$$(var5, DynamicBundle.getResourceBundle(SelectResinLocationEditor.class.getClassLoader(), "messages/ResinBundle").getString("location.dlg.detected.version"));
       var1.add(var5, new GridConstraints(3, 0, 1, 1, 8, 0, 0, 0, (Dimension)null, (Dimension)null, (Dimension)null));
       JLabel var6 = new JLabel();
       this.resinVersionLabel = var6;
-      this.$$$loadLabelText$$$(var6, DynamicBundle.getBundle("messages/ResinBundle", SelectResinLocationEditor.class).getString("location.dlg.detected.version.default"));
+      this.$$$loadLabelText$$$(var6, DynamicBundle.getResourceBundle(SelectResinLocationEditor.class.getClassLoader(), "messages/ResinBundle").getString("location.dlg.detected.version.default"));
       var1.add(var6, new GridConstraints(3, 1, 1, 1, 8, 0, 0, 0, (Dimension)null, (Dimension)null, (Dimension)null));
       JLabel var7 = new JLabel();
-      this.$$$loadLabelText$$$(var7, DynamicBundle.getBundle("messages/ResinBundle", SelectResinLocationEditor.class).getString("location.dlg.resin.include.jars"));
+      this.$$$loadLabelText$$$(var7, DynamicBundle.getResourceBundle(SelectResinLocationEditor.class.getClassLoader(), "messages/ResinBundle").getString("location.dlg.resin.include.jars"));
       var1.add(var7, new GridConstraints(1, 0, 1, 1, 8, 0, 0, 0, (Dimension)null, (Dimension)null, (Dimension)null));
       JCheckBox var8 = new JCheckBox();
       this.includeAllResinjarsCheckbox = var8;
       var8.setText("");
       var1.add(var8, new GridConstraints(1, 1, 1, 1, 8, 0, 3, 0, (Dimension)null, (Dimension)null, (Dimension)null));
       JLabel var9 = new JLabel();
-      this.$$$loadLabelText$$$(var9, DynamicBundle.getBundle("messages/ResinBundle", SelectResinLocationEditor.class).getString("location.dlg.default.resin.conf"));
+      this.$$$loadLabelText$$$(var9, DynamicBundle.getResourceBundle(SelectResinLocationEditor.class.getClassLoader(), "messages/ResinBundle").getString("location.dlg.default.resin.conf"));
       var1.add(var9, new GridConstraints(2, 0, 1, 1, 8, 0, 0, 0, (Dimension)null, (Dimension)null, (Dimension)null));
       TextFieldWithBrowseButton var10 = new TextFieldWithBrowseButton();
       this.defaultResinConf = var10;
