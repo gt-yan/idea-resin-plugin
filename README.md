@@ -46,7 +46,7 @@ JetBrains 官方 Resin 插件（Marketplace ID 14598，plugin id `com.intellij.r
 
 ## 构建
 
-环境：JDK 17+、IntelliJ IDEA Ultimate 2023.1+。Gradle 通过 Wrapper 自动获取，无需单独安装。
+环境：JDK 17+、IntelliJ IDEA Ultimate 2023.3.1（编译基准）。Gradle 通过 Wrapper 自动获取，无需单独安装。
 
 ```bash
 # Windows
@@ -56,7 +56,7 @@ gradlew.bat buildPlugin
 ./gradlew buildPlugin
 ```
 
-产物：`build/distributions/idea-resin-plugin-1.0.0.zip`
+产物：`build/distributions/idea-resin-plugin-1.0.5.zip`
 
 > [build.gradle.kts](build.gradle.kts) 默认通过 `local(...)` 使用本机安装的
 > IDEA 2023.3.1 作为编译基准。若网络可访问 JetBrains CDN，可改为
