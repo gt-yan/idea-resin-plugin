@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "io.github.gt-yan"
-version = "1.0.4"
+version = "1.0.5"
 
 repositories {
     mavenCentral()
@@ -21,6 +21,7 @@ dependencies {
         // For a fully remote build replace this with:
         //   intellijIdeaUltimate("2026.2.3")
         local("E:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.1")
+     
         bundledPlugin("com.intellij.javaee")
         bundledPlugin("com.intellij.javaee.app.servers.integration")
     }

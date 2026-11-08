@@ -31,6 +31,11 @@
   ]]></description>
 
   <change-notes><![CDATA[
+    <h3>1.0.5</h3>
+    <ul>
+      <li>Rebuilt against IntelliJ IDEA 2023.3 Ultimate; no functional changes since 1.0.4.</li>
+    </ul>
+
     <h3>1.0.4</h3>
     <ul>
       <li>Fixed binary incompatibility with IntelliJ IDEA 2023.2: <code>getMessageHtml()</code>
