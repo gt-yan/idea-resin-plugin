@@ -31,6 +31,13 @@
   ]]></description>
 
   <change-notes><![CDATA[
+    <h3>1.0.3</h3>
+    <ul>
+      <li>Replaced the internal <code>SkipDefaultsSerializationFilter</code> constructor with an
+          equivalent plugin-side serialization filter, removing the last internal API usage.</li>
+      <li>Bundled <code>LICENSE</code> and <code>NOTICE</code> files inside the plugin archive.</li>
+    </ul>
+
     <h3>1.0.2</h3>
     <ul>
       <li>Replaced deprecated and scheduled-for-removal API usages with their current public equivalents
