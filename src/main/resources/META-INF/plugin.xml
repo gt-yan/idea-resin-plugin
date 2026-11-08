@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>io.github.resin-plugin.resin</id>
+  <id>io.github.gt-yan.resin</id>
   <name>Resin (Community)</name>
 
   <depends>com.intellij.modules.java</depends>

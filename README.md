@@ -6,7 +6,7 @@ JetBrains 官方 Resin 插件（Marketplace ID 14598，plugin id `com.intellij.r
 
 | 项 | 值 |
 |---|---|
-| 插件 ID | `io.github.resin-plugin.resin` |
+| 插件 ID | `io.github.gt-yan.resin` |
 | 插件名称 | Resin (Community) |
 | 兼容范围 | **IntelliJ IDEA Ultimate 2023.1 ~ 2026.3** |
 | since-build / until-build | `232` / `263.*` |

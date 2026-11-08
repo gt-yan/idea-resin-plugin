@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.intellij.platform") version "2.19.0"
 }
 
-group = "io.github.resin-plugin"
+group = "io.github.gt-yan"
 version = "1.0.0"
 
 repositories {
